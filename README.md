@@ -14,10 +14,13 @@ Just fire it up, point it to a folder, and let your pals whip your photo library
 cmd
 cd /d "C:\Path\To\Your\Project"
 python -m venv venv
-venv\Scripts\activate
-pip install --upgrade pip
-pip install pyinstaller pillow opencv-python imagehash numpy colorama pywin32
-pyinstaller --onefile --hidden-import=cv2 --hidden-import=cv2.cv2 --hidden-import=imagehash --hidden-import=pywt --console --icon=app.ico Photo.py
+call venv\Scripts\activate
+python -m pip install --upgrade pip
+pip install pyinstaller pillow opencv-python imagehash numpy PyWavelets colorama pywin32 pytesseract
+pip install torch --index-url https://download.pytorch.org/whl/cpu
+pip install easyocr
+pip install paddleocr
+pyinstaller --onefile --noconsole --icon=app.ico --hidden-import=cv2 --hidden-import=cv2.cv2 --hidden-import=imagehash --hidden-import=pywt --hidden-import=win32com --hidden-import=win32com.client ^--add-data "app.ico;." Photo.py
 cd dist
 Photo.exe
 ```
