@@ -1,5 +1,5 @@
 # PicPals
-__Picture Pals – the Perfect Image Collection Tidying Utility & Recognition Engine🐾__
+__Picture Pals – the Image Collection Tidying Utility & Recognition Engine🐾__
 
 This program is both your photography and labeling assistant! 
 With Picture Pals you can:
