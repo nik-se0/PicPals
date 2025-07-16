@@ -20,7 +20,7 @@ pip install pyinstaller pillow opencv-python imagehash numpy PyWavelets colorama
 pip install torch --index-url https://download.pytorch.org/whl/cpu
 pip install easyocr
 pip install paddleocr
-pyinstaller --onefile --noconsole --icon=app.ico --hidden-import=cv2 --hidden-import=cv2.cv2 --hidden-import=imagehash --hidden-import=pywt --hidden-import=win32com --hidden-import=win32com.client ^--add-data "app.ico;." Photo.py
+pyinstaller --onefile --noconsole --name PicPals --icon=app.ico --hidden-import=cv2 --hidden-import=cv2.cv2 --hidden-import=imagehash --hidden-import=pywt --hidden-import=win32com --hidden-import=win32com.client ^--add-data "app.ico;." Photo.py
 cd dist
 Photo.exe
 ```
